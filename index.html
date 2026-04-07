@@ -564,13 +564,22 @@
                     </div>
                 </div>
 
-                <div class="flex items-center gap-4 pt-6 border-t border-white/10 mt-2">
-                    <div class="qr-wrapper no-print" title="클릭하여 QR 코드 이미지 교체">
-                        <img id="qrPreview"
-                           img src="C:\Users\ghhye\OneDrive\바탕 화면\KakaoTalk_20260327_100635709.jpg"
-                            alt="QR Code">
-                        <div class="qr-overlay">교체하기</div>
-                        <input type="file" accept="image/*" onchange="handleQrUpload(this)">
+               <div class="flex items-center gap-4 pt-6 border-t border-white/10 mt-2">
+    <div class="qr-wrapper no-print" title="클릭하여 QR 코드 이미지 교체">
+        <img id="qrPreview" src="" alt="QR 미등록" style="background: #f8fafc;">
+        <div class="qr-overlay">이미지 업로드</div>
+        <input type="file" accept="image/*" onchange="handleQrUpload(this)">
+    </div>
+
+    <div class="hidden print:block qr-wrapper">
+        <img id="qrPreviewPrint" src="" alt="QR Code">
+    </div>
+
+    <div class="text-[11px] text-slate-300 leading-tight font-black">
+        <span class="text-blue-400 font-black block mb-1">QR 코드 스캔</span>
+        업로드하신 전문가 상담 채널로 <br>즉시 연결됩니다.
+    </div>
+</div>
                     </div>
                     <!-- 인쇄용 고정 QR -->
                     <div class="hidden print:block qr-wrapper">
